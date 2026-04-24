@@ -1,15 +1,15 @@
-# SimpleLaunchpad
+# AppShelf
 
-# 🚀 SimpleLaunchpad  
+# 🚀 AppShelf  
 ### A fast, elegant macOS launcher that opens your favorite apps from one clean, focused grid.
 
-![SimpleLaunchpad Screenshot](images/AppStore_Desktop_Light.png)
+![AppShelf Screenshot](images/AppStore_Desktop_Light.png)
 
 ---
 
-## ✨ Why SimpleLaunchpad
+## ✨ Why AppShelf
 
-SimpleLaunchpad gives you instant access to your essential apps—without Dock clutter, without distractions, and without breaking your workflow.
+AppShelf gives you instant access to your essential apps—without Dock clutter, without distractions, and without breaking your workflow.
 
 - Open your launcher with a global shortcut  
 - Keep a clean, minimal grid of only the apps you choose  
@@ -28,7 +28,7 @@ SimpleLaunchpad gives you instant access to your essential apps—without Dock c
 - ⏱️ **Idle auto‑hide** option  
 - 🌍 **Localized in 16 languages**
 
-![SimpleLaunchpad Screenshot](images/SimpleLaunchpad.png)
+![AppShelf Screenshot](images/AppShelf.png)
 
 ---
 
@@ -58,7 +58,7 @@ SimpleLaunchpad gives you instant access to your essential apps—without Dock c
 
 ## 🌐 Localization
 
-SimpleLaunchpad is fully localized in:
+AppShelf is fully localized in:
 
 - English  
 - Arabic  
@@ -81,10 +81,10 @@ SimpleLaunchpad is fully localized in:
 
 ## 🔗 Links
 
-- 📘 **README**: https://github.com/ops-eng/SimpleLaunchpad/blob/main/README.md  
-- ❓ **Help**: https://github.com/ops-eng/SimpleLaunchpad/blob/main/help.html  
-- 🔒 **Privacy**: https://github.com/ops-eng/SimpleLaunchpad/blob/main/privacy.html  
-- 🛠️ **Support**: https://github.com/ops-eng/SimpleLaunchpad/blob/main/support.html  
+- 📘 **README**: https://ops-eng.github.io/AppShelf/README.md
+- ❓ **Help**: https://ops-eng.github.io/AppShelf/help.html
+- 🔒 **Privacy**: https://ops-eng.github.io/AppShelf/privacy.html
+- 🛠️ **Support**: https://ops-eng.github.io/AppShelf/support.html
 
 ---
 
@@ -101,4 +101,4 @@ Built with care by **Efthymios Tampouris**.
 
 ---
 
-![SimpleLaunchpad Screenshot](images/AppStore_desktop_v.png)
+![AppShelf Screenshot](images/AppStore_desktop_v.png)
