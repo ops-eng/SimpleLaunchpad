@@ -88,13 +88,6 @@ AppShelf is fully localized in:
 
 ---
 
-## 📝 Notes
-
-- A local **StoreKit (.storekit)** configuration is used for development/testing.  
-- **Release/Archive** builds must use real App Store Connect products (no StoreKit simulation).
-
----
-
 ## 👨‍💻 Developer
 
 Built with care by **Efthymios Tampouris**.
