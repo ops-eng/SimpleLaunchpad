@@ -5,69 +5,395 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AppShelf Help</title>
     <style>
+        :root {
+            --bg: #f9fafb;
+            --text: #101827;
+            --muted: #475569;
+            --line: #d8dee6;
+            --accent: #2563eb;
+            --panel: #ffffff;
+            --panel-soft: #f3f6fb;
+            --radius: 8px;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            margin: 32px auto;
-            max-width: 860px;
-            line-height: 1.6;
-            color: #1f2937;
-            padding: 0 20px;
-            background: #ffffff;
+            margin: 24px auto;
+            max-width: 940px;
+            line-height: 1.58;
+            color: var(--text);
+            padding: 0 20px 32px;
+            background: var(--bg);
         }
-        h1, h2 { margin-bottom: 8px; }
-        section { margin-top: 24px; }
-        .hint { color: #2563eb; }
-        a { color: #1d4ed8; }
+
+        h1, h2, h3, h4 {
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .hint {
+            color: var(--muted);
+            margin-top: 0;
+            font-size: 0.96rem;
+        }
+
+        section {
+            margin-top: 24px;
+        }
+
+        article {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 14px 16px;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+        }
+
+        ul, ol {
+            margin: 8px 0 8px 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            margin-left: 8px;
+        }
+
+        .note {
+            color: #065f46;
+            background: var(--panel-soft);
+            border-left: 4px solid #10b981;
+            padding: 8px 10px;
+            margin-top: 8px;
+        }
+
+        .warning {
+            color: #92400e;
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 8px 10px;
+            margin-top: 8px;
+        }
+
+        .danger {
+            color: #7f1d1d;
+            background: #fee2e2;
+            border-left: 4px solid #ef4444;
+            padding: 8px 10px;
+            margin-top: 8px;
+        }
+
+        code {
+            background: #e5e7eb;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 0.92rem;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        .feature-title {
+            margin: 0;
+        }
+
+        .feature-list {
+            margin-top: 8px;
+            display: grid;
+            gap: 6px;
+        }
+
+        .small {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 10px;
+            background: var(--panel-soft);
+        }
+
+        .card h4 {
+            margin: 0 0 6px 0;
+        }
     </style>
 </head>
 <body>
     <h1>AppShelf Help</h1>
-    <p class="hint">Version: 1.0.0 (2)</p>
+    <p class="hint">AppShelf Help (in-app, bundled) · Last updated: 26 Apr 2026</p>
 
     <section>
-        <h2>What AppShelf Does</h2>
-        <p>AppShelf is a lightweight app launcher for macOS that helps you open selected apps quickly from one organized grid.</p>
+        <h2>1) Overview</h2>
+        <article>
+            <p>AppShelf is a lightweight macOS app shelf for launching your selected apps from a single grid-based pad.</p>
+            <p>Open fast with a shortcut, launch in one click, and manage layout and boards from Settings.</p>
+            <div class="two-col">
+                <div class="card">
+                    <h4>Included</h4>
+                    <ul>
+                        <li>App management (add/remove/reorder)</li>
+                        <li>Two boards (Main/Work) with renaming</li>
+                        <li>Search inside the active board</li>
+                        <li>Pad layout customization</li>
+                        <li>Global shortcut toggling</li>
+                        <li>Open-on-demand from menu bar or shortcut</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Local data</h4>
+                    <ul>
+                        <li>Settings and app list are stored on your Mac.</li>
+                        <li>Help content is part of the app bundle.</li>
+                        <li>Licensing state uses your Apple ID entitlement flow.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
     </section>
 
     <section>
-        <h2>Getting Started</h2>
-        <ol>
-            <li>Open <strong>Settings</strong> from the menu bar icon menu.</li>
-            <li>In <strong>Manage Apps</strong>, click <strong>Add App</strong> and choose applications.</li>
-            <li>Reorder apps with drag and drop.</li>
-            <li>Use the <strong>Pro</strong> tab to unlock advanced customization.</li>
-        </ol>
+        <h2>2) AppShelf Pad</h2>
+        <article>
+            <h3 class="feature-title">At a glance</h3>
+            <div class="feature-list">
+                <div>• Searchable app grid with labels</div>
+                <div>• Board menu in header (switch active board)</div>
+                <div>• Global show/hide by shortcut</div>
+                <div>• Optional translucent background and rounded chrome</div>
+                <div>• Auto-hide timer after configured inactivity</div>
+                <div>• Settings access and license indicators</div>
+            </div>
+            <h3 class="feature-title">Use the pad</h3>
+            <ul>
+                <li>Open via menu bar icon or configured global shortcut.</li>
+                <li>Use the board menu in the header to switch between boards.</li>
+                <li>Click an app icon to launch it.</li>
+                <li>Move through your app list by adding, removing, and reordering entries.</li>
+                <li>Use auto-hide and opacity controls for desktop blending and attention style.</li>
+            </ul>
+            <h3 class="feature-title">Recommended setup</h3>
+            <ul>
+                <li>Use larger icons with fewer columns if text is hard to read.</li>
+                <li>Enable a moderate opacity for readability against bright wallpapers.</li>
+                <li>Set hide delay to match your workflow (0 for manual mode, higher for auto-hide).</li>
+            </ul>
+        </article>
     </section>
 
     <section>
-        <h2>Main Features</h2>
-        <ul>
-            <li>Add, remove, and reorder apps in your shelf.</li>
-            <li>Launch apps from a clean visual grid.</li>
-            <li>Customize appearance (columns, icon size, spacing, hide delay) in Pro.</li>
-            <li>Customize global activation shortcut in Pro.</li>
-            <li>Restore purchases from the Pro tab.</li>
-            <li>Optional Launch at Login support.</li>
-        </ul>
+        <h2>3) Manage Apps</h2>
+        <article>
+            <p>Go to <strong>Settings → Manage Apps</strong>.</p>
+            <h3 class="feature-title">Boards</h3>
+            <ul>
+                <li>Use the board selector to switch between available boards.</li>
+                <li>Use <strong>Rename board</strong> to rename the selected board.</li>
+                <li>Apps are added to the currently selected board.</li>
+            </ul>
+            <h3 class="feature-title">Add apps</h3>
+            <ol>
+                <li>Open Settings and go to <strong>Manage Apps</strong>.</li>
+                <li>Choose <strong>Add App</strong>.</li>
+                <li>Select an app and confirm.</li>
+                <li>New item appears in the panel list and is available on next AppShelf pad render.</li>
+            </ol>
+            <h3 class="feature-title">Reorder apps</h3>
+            <ul>
+                <li>Press-and-hold the app tile and drag it to a new position.</li>
+                <li>Drop to apply the new order.</li>
+                <li>If drag feels inconsistent, close and reopen Settings once.</li>
+            </ul>
+            <h3 class="feature-title">Delete apps</h3>
+            <ul>
+                <li>Select the entries you want to remove.</li>
+                <li>Use delete action to remove from the list.</li>
+                <li>Deleted entries are removed from the pad immediately.</li>
+            </ul>
+            <div class="warning">
+                If an app was moved to a new folder/path, remove old entry and re-add with the current path.
+            </div>
+        </article>
     </section>
 
     <section>
-        <h2>Troubleshooting Shortcut</h2>
-        <p><strong>Changes take effect immediately.</strong></p>
-        <ol>
-            <li>Check <strong>System Settings &gt; Privacy &amp; Security &gt; Accessibility</strong>.</li>
-            <li>Ensure <strong>AppShelf</strong> is listed and enabled.</li>
-            <li>Check if another app already uses the same shortcut.</li>
-            <li>Try a unique key combination for testing.</li>
-        </ol>
+        <h2>4) Appearance and Layout</h2>
+        <article>
+            <p>Appearance controls define the AppShelf pad density and feel.</p>
+            <ul>
+                <li><strong>Columns:</strong> number of columns in one row.</li>
+                <li><strong>Icon Size:</strong> visual size of app icons in points.</li>
+                <li><strong>Spacing:</strong> gap between icon tiles.</li>
+                <li><strong>Pad Opacity:</strong> background transparency level.</li>
+                <li><strong>Hide Delay:</strong> time before auto-hide.</li>
+            </ul>
+            <h3 class="feature-title">Free vs Pro</h3>
+            <p>
+                In Free mode appearance and shortcut customization are locked and default values are enforced.
+                Pro unlocks appearance controls and shortcut customization.
+            </p>
+            <div class="note">
+                Free tier supports Manage Apps, boards, and board renaming, with up to 10 apps total.
+            </div>
+        </article>
     </section>
 
     <section>
-        <h2>Contact and Links</h2>
-        <p>SUPPORT: <a href="mailto:tim.tampouris@yahoo.com?subject=AppShelf%20Support">Contact Support</a></p>
-        <p>Support page: <a href="https://ops-eng.github.io/AppShelf/support.html">https://ops-eng.github.io/AppShelf/support.html</a></p>
-        <p>Privacy policy: <a href="https://ops-eng.github.io/AppShelf/privacy.html">https://ops-eng.github.io/AppShelf/privacy.html</a></p>
-        <p>Project page: <a href="https://ops-eng.github.io/AppShelf/">https://ops-eng.github.io/AppShelf/</a></p>
+        <h2>5) Shortcuts and Global Access</h2>
+        <article>
+            <p>Set a global keyboard shortcut to open/close AppShelf quickly.</p>
+            <ul>
+                <li>Select modifier keys plus a base key in Settings.</li>
+                <li>Changes apply immediately.</li>
+                <li>Shortcut is treated as global while AppShelf is active under macOS permissions.</li>
+                <li>This setting is a Pro feature.</li>
+            </ul>
+            <div class="note">
+                If another app uses your combo, choose a unique one to prevent conflicts.
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <h2>6) Startup Behavior</h2>
+        <article>
+            <p>Optionally start AppShelf at login.</p>
+            <ul>
+                <li>Enable launch-at-login in Settings.</li>
+                <li>Complete any permission prompts for login item management.</li>
+                <li>Verify in macOS login startup entries if needed.</li>
+            </ul>
+            <p class="small">Tip: keep this enabled if you use AppShelf on every new desktop session.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>7) Pro, Purchase, Restore</h2>
+        <article>
+            <p>Pro is delivered as a lifetime entitlement via StoreKit for your Apple account.</p>
+            <ul>
+                <li>Use <strong>Upgrade to Pro</strong> to unlock additional controls.</li>
+                <li>Use <strong>Restore Purchases</strong> after reinstall/device changes.</li>
+                <li>Restore requires Apple ID access and network.</li>
+                <li>Sandbox can behave differently from production App Store accounts.</li>
+            </ul>
+            <h3 class="feature-title">Why Restore may fail</h3>
+            <ul>
+                <li>Wrong Apple ID</li>
+                <li>Offline / store unreachable</li>
+                <li>Entitlements still refreshing in the current session</li>
+                <li>App build/environment mismatch</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h2>8) Help, Data, and Privacy</h2>
+        <article>
+            <ul>
+                <li><strong>Local first:</strong> all feature instructions are in this offline Help file.</li>
+                <li><strong>Storage:</strong> app list and preferences are stored locally.</li>
+                <li><strong>Network needed:</strong> only when StoreKit or remote documentation links are used.</li>
+                <li><strong>Permissions:</strong> accessibility and startup permissions can affect behavior.</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h2>9) Troubleshooting (Expanded)</h2>
+        <article>
+            <h3 class="feature-title">1. Pad not opening</h3>
+            <ul>
+                <li>Use the menu bar toggle first to rule out shortcut conflict.</li>
+                <li>Confirm the app is not hidden behind another window or full-screen transition.</li>
+                <li>Restart AppShelf and test again.</li>
+            </ul>
+
+            <h3 class="feature-title">2. Shortcut does not trigger</h3>
+            <ul>
+                <li>System Settings → Privacy &amp; Security → Accessibility: allow AppShelf.</li>
+                <li>Pick another combo if another utility owns the existing one.</li>
+                <li>After changing shortcut, reopen Settings once if needed.</li>
+            </ul>
+
+            <h3 class="feature-title">3. App does not launch from pad</h3>
+            <ul>
+                <li>Check if the app path exists.</li>
+                <li>Re-add an app that was moved after upgrade.</li>
+                <li>For unsigned binaries or scripts, check execution permissions.</li>
+                <li>Restart the target app manually to clear stale process state.</li>
+            </ul>
+
+            <h3 class="feature-title">4. Drag-and-drop reorder unstable</h3>
+            <ul>
+                <li>Drag with a steady pointer and pause briefly over the target.</li>
+                <li>Move one tile at a time; avoid rapid repeated drags.</li>
+                <li>Close and reopen Settings for a clean gesture state.</li>
+            </ul>
+
+            <h3 class="feature-title">5. Pro features unlocked/locked unexpectedly</h3>
+            <ul>
+                <li>Tap Restore Purchases with active internet.</li>
+                <li>Reopen Settings and wait a moment for entitlement refresh.</li>
+                <li>Verify you are signed into the correct Apple ID.</li>
+            </ul>
+
+            <h3 class="feature-title">6. AppShelf pad closes immediately after opening app</h3>
+            <ul>
+                <li>Verify idle hide delay is not set too low.</li>
+                <li>Check whether focus transitions are dismissing the pad.</li>
+                <li>Use manual mode if auto-hide is too aggressive.</li>
+            </ul>
+
+            <h3 class="feature-title">7. Help window seems different from macOS standard</h3>
+            <ul>
+                <li>Help is shown in an in-app local HTML window by design.</li>
+                <li>The Help content is bundled with AppShelf and available offline.</li>
+                <li>Local copy remains offline and fast regardless of internet state.</li>
+            </ul>
+
+            <h3 class="feature-title">8. I want better diagnostics</h3>
+            <ul>
+                <li>Capture the <strong>exact steps</strong> before the issue occurs.</li>
+                <li>Include shortcut used, OS version, and app version in your report.</li>
+                <li>Mention any permission toggles you changed recently.</li>
+            </ul>
+
+            <div class="warning">
+                If issue persists and repeats in a clean session, include Console logs for the AppShelf process with timestamp.
+            </div>
+            <div class="note">
+                If a behavior appears only with one macOS version, include that version in support details.
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <h2>10) Contact and Links</h2>
+        <article>
+            <p>Support: <a href="mailto:tim.tampouris@yahoo.com?subject=AppShelf%20Support">support email</a></p>
+            <p>Support page: <a href="https://ops-eng.github.io/AppShelf/support.html">https://ops-eng.github.io/AppShelf/support.html</a></p>
+            <p>Privacy policy: <a href="https://ops-eng.github.io/AppShelf/privacy.html">https://ops-eng.github.io/AppShelf/privacy.html</a></p>
+            <p>Source repository: <a href="https://github.com/ops-eng/AppShelf">https://github.com/ops-eng/AppShelf</a></p>
+        </article>
     </section>
 </body>
 </html>
